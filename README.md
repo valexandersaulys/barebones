@@ -4,6 +4,11 @@ The documetation is bit impractical so I'm rewriting it here.
 
 ``zip -r barebones.zip barebones/*``
 
+Context Variables:
+
+  * [`site`](https://ghost.org/docs/themes/helpers/site/)
+  * [`post`](https://ghost.org/docs/themes/helpers/post/)
+
 
 ## Layout of file
 

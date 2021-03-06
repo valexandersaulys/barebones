@@ -1,8 +1,19 @@
-body {
-    max-width: 720px;
-    margin: auto;
-    font-family: overpass;
-    color: #1d1c16;
+@media screen and (width > 600px) {
+    body {
+        max-width: 720px;
+        margin: auto;
+        font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+        color: #1d1c16;
+    }
+}
+
+@media screen and (width <= 600px) {
+    body {
+        max-width: 720px;
+        margin: 0 10px;
+        font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+        color: #1d1c16;
+    }
 }
 
 /* * * * * Index * * * * */
@@ -12,12 +23,12 @@ body {
     display: none;
 }
 ul.nav {
-    margin: 1.5rem 0 2rem 0;
+    margin: 8px 0 16px 0;
     padding: 0;
 }
 ul.nav > li {
     display: inline;
-    margin-right: 1rem;
+    margin-right: 16px;
 }
 
 .content { /* everything under the navigation */ }
@@ -43,7 +54,7 @@ a.older-posts { /* 'Older Posts' */ }
 /* loops over and creates */
 article.post {
     /* note: also affects the post page */
-    margin: 0 0 3rem 0;
+    margin: 0 0 48px 0;
     padding: 0;
 }
 /* optional: 'article.tag-kebab-cased-name' */
@@ -57,7 +68,7 @@ article.post > footer.post-meta {
 
 /* bottom of page */
 nav.pagination {
-    margin: 1rem 0 1rem 0;
+    margin: 16px 0 16px 0;
 }
 
 
@@ -70,15 +81,29 @@ section.post-content > h1.post-title {
     font-weight: 300;
     font-size: xxx-large;
     letter-spacing: 0.05rem;
+    margin: 32px 0 16px 0;
 }
 /* content follows, not container */
+section.post-content > p, ol {
+    margin: 0;
+}
+
+section.post-content > h1, h2, h3, h4, h5, h6 {
+    margin: 32px 0 8px 0;
+}
+
 section.post-content > figure {
     /* image holder */
-    margin: 3rem 0;
+    margin: 32px 0;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #bebaa7;
+    border-radius: 5px;
+    padding: 8px;
 }
 section.post-content > figure.kg-bookmark-card {  }
 section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content {
-    padding: 0 2rem;
+    padding: 0 32px;
 }
 section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-title {
     font-family: monospace;
@@ -87,13 +112,14 @@ section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-
 section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-description {
     font-style: italic;
     font-size: smaller;
-    margin: 0.5rem 0;
+    margin: 8px 0;
 }
 section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-metadata {
     display: none;
 }
 img {
     width:100%; height:100%;
+    border-radius: 10px;
 }
 section.post-content > figure > img {
     /* image */
@@ -104,11 +130,17 @@ section.post-content > figure > a > div > img {
 }
 figure.kg-gallery-card { /* will hold a gallery of cards that can be iterate over in javascript */ }
 section.post-content > blockquote { }
-section.post-content > pre { margin: 2rem 0; }
+section.post-content > pre {
+    margin: 32px 0;
+    overflow-x: scroll;
+    background-color: #3b382b;
+    padding: 8px;
+    border-radius: 4px;
+}
 section.post-content > pre > code {
     /* my already be a default? */
     font-family: monospace;
-    color: #3b382b;
+    color: #e9e8e2;
     font-weight: 600;
 }
     
