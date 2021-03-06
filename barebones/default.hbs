@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{! Page Meta }}
+        <title>{{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
+        <link href="assets/css/styles.css" rel="stylesheet"/>
+        {{ghost_head}}
+    </head>
+
+    {{! body_class==home-template in index and post-template in post }}
+    <body class="{{ body_class }}">
+
+        <div class="header">
+            <h3>{{ @blog.title }}</h3>
+            {{ navigation }}
+            {{! ul.nav => loops through all pages }}
+            {{! li.nav-home.nav-current }}
+        </div>
+
+        <div class="content">
+            {{{ body }}}
+        </div>
+
+        {{ ghost_foot }}
+
+    </body>
+</html>

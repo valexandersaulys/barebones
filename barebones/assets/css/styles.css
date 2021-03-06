@@ -1,0 +1,68 @@
+body {
+    max-width: 720px;
+    margin: auto;
+}
+
+/* * * * * Index * * * * */
+.header { /* navigation head */ }
+.head > h3 {
+    /* name of blog */
+    display: none;
+}
+ul.nav {
+    margin: 1.5rem 0 2rem 0;
+    padding: 0;
+}
+ul.nav > li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.content { /* everything under the navigation */ }
+
+.content > header > .site-heading > h1 {
+    /* 'Vincent's Blog' */
+    margin: 0 0 3rem 0;
+}
+.content > header > .site-heading > span.subheading { /* 'Thoughts, stories, and idea' */ }
+
+/* pagination uptop */
+.extra-pagination { /* redundant with the nav */ }
+nav.pagination { /* cluster of 'page 1 of 2' */ }
+span.page-number { /* 'page 1 of 2' */ }
+a.older-posts { /* 'Older Posts' */ }
+
+/* loops over and creates */
+article.post {
+    /* note: also affects the post page */
+    margin: 4rem 0 2rem 0;
+    padding: 0;
+}
+/* optional: 'article.tag-kebab-cased-name' */
+article.post > header.post-header {}
+article.post > section.post-excerpt {}
+article.post > section.post-excerpt > p { /* actual text being printer */ }
+article.post > footer.post-meta {
+    /* "on __tag__ 06 March 2021" */
+    display: none;
+} 
+
+/* bottom of page */
+nav.pagination {}
+
+
+
+/* * * * * Post Page * * * * */
+section.post-content {}
+section.post-content > h1.post-title {}
+/* content follows, not container */
+section.post-content > figure { /* image holder */ }
+section.post-content > figure > img { /* image */ }
+section.post-content > blockquote { }
+
+footer.post-footer { }
+footer.post-footer > section.author > h2 { /* written by */ }
+footer.post-footer > section.author > h4 { /* author name ? */ }
+
+
+
