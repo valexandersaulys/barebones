@@ -8,6 +8,7 @@ ul.nav > li { /* navigation items */ }
 
 .content { /* everything under the navigation */ }
 
+.content > header { }
 .content > header > .site-heading > h1 { /* 'Vincent's Blog' */ }
 .content > header > .site-heading > span.subheading { /* 'Thoughts, stories, and idea' */ }
 
@@ -34,6 +35,12 @@ section.post-content {}
 section.post-content > h1.post-title {}
 /* content follows, not container */
 section.post-content > figure { /* image holder */ }
+section.post-content > figure.kg-bookmark-card {  }
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content {  }
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-title {  }
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-description {  }
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-metadata {  }
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-metadata {  }
 section.post-content > figure > img { /* image */ }
 section.post-content > blockquote { }
 

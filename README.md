@@ -1,6 +1,8 @@
 # Custom Theming in Ghost
 
-The documetation is bit impractical so I'm rewriting it here
+The documetation is bit impractical so I'm rewriting it here.
+
+``zip -r barebones.zip barebones/*``
 
 
 ## Layout of file
@@ -113,3 +115,18 @@ Follows convention of `custom-{{template-name}}.hbs`.
 The `template-name` will be rendered in kebab-case, i.e. `Template
 Name`.
 
+
+
+## Snippets
+
+#### Page Header
+
+```css
+{{! Page Header}}
+<header>
+<div class="site-heading">
+  <h1>{{ @blog.title }}</h1>
+  <span class="subheading">{{ @blog.description }}</span>
+</div>
+</header>
+```

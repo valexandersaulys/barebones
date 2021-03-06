@@ -1,6 +1,8 @@
 body {
     max-width: 720px;
     margin: auto;
+    font-family: overpass;
+    color: #1d1c16;
 }
 
 /* * * * * Index * * * * */
@@ -20,14 +22,20 @@ ul.nav > li {
 
 .content { /* everything under the navigation */ }
 
+.content > header {
+    display: none;
+}
+
 .content > header > .site-heading > h1 {
     /* 'Vincent's Blog' */
-    margin: 0 0 3rem 0;
 }
 .content > header > .site-heading > span.subheading { /* 'Thoughts, stories, and idea' */ }
 
 /* pagination uptop */
-.extra-pagination { /* redundant with the nav */ }
+.extra-pagination {
+    /* redundant with the nav */
+    display: none;
+}
 nav.pagination { /* cluster of 'page 1 of 2' */ }
 span.page-number { /* 'page 1 of 2' */ }
 a.older-posts { /* 'Older Posts' */ }
@@ -35,7 +43,7 @@ a.older-posts { /* 'Older Posts' */ }
 /* loops over and creates */
 article.post {
     /* note: also affects the post page */
-    margin: 4rem 0 2rem 0;
+    margin: 0 0 3rem 0;
     padding: 0;
 }
 /* optional: 'article.tag-kebab-cased-name' */
@@ -48,21 +56,96 @@ article.post > footer.post-meta {
 } 
 
 /* bottom of page */
-nav.pagination {}
+nav.pagination {
+    margin: 1rem 0 1rem 0;
+}
 
 
 
 /* * * * * Post Page * * * * */
-section.post-content {}
-section.post-content > h1.post-title {}
+section.post-content {
+    line-height: 1.5;
+}
+section.post-content > h1.post-title {
+    font-weight: 300;
+    font-size: xxx-large;
+    letter-spacing: 0.05rem;
+}
 /* content follows, not container */
-section.post-content > figure { /* image holder */ }
-section.post-content > figure > img { /* image */ }
+section.post-content > figure {
+    /* image holder */
+    margin: 3rem 0;
+}
+section.post-content > figure.kg-bookmark-card {  }
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content {
+    padding: 0 2rem;
+}
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-title {
+    font-family: monospace;
+    font-size: larger;
+}
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-description {
+    font-style: italic;
+    font-size: smaller;
+    margin: 0.5rem 0;
+}
+section.post-content > figure.kg-bookmark-card > a > .kg-bookmark-content > .kg-bookmark-metadata {
+    display: none;
+}
+img {
+    width:100%; height:100%;
+}
+section.post-content > figure > img {
+    /* image */
+    width: 100%;
+}
+section.post-content > figure > a > div > img {
+    width: 100%
+}
+figure.kg-gallery-card { /* will hold a gallery of cards that can be iterate over in javascript */ }
 section.post-content > blockquote { }
+section.post-content > pre { margin: 2rem 0; }
+section.post-content > pre > code {
+    /* my already be a default? */
+    font-family: monospace;
+    color: #3b382b;
+    font-weight: 600;
+}
+    
 
 footer.post-footer { }
 footer.post-footer > section.author > h2 { /* written by */ }
 footer.post-footer > section.author > h4 { /* author name ? */ }
 
 
+/* * * * * Colors * * * * */
 
+primary-900 { background-color: hsl(50, 89%, 5%); color: #181401 }
+primary-800 { background-color: hsl(50, 71%, 15%); color: #41380b }
+primary-700 { background-color: hsl(50, 59%, 25%); color: #65591a }
+primary-600 { background-color: hsl(50, 52%, 35%); color: #88782b }
+primary-500 { background-color: hsl(50, 50%, 45%); color: #ac9939 }
+primary-400 { background-color: hsl(50, 52%, 55%); color: #c8b451 }
+primary-300 { background-color: hsl(50, 61%, 65%); color: #dcca6f }
+primary-200 { background-color: hsl(50, 74%, 75%); color: #eedf90 }
+primary-100 { background-color: hsl(50, 92%, 85%); color: #fcf0b6 }
+
+secondary-900 { background-color: hsl(158, 89%, 5%); color: #011810 }
+secondary-800 { background-color: hsl(158, 71%, 15%); color: #0b412d }
+secondary-700 { background-color: hsl(158, 59%, 25%); color: #1a654a }
+secondary-600 { background-color: hsl(158, 52%, 35%); color: #2b8866 }
+secondary-500 { background-color: hsl(158, 50%, 45%); color: #39ac82 }
+secondary-400 { background-color: hsl(158, 52%, 55%); color: #51c89c }
+secondary-300 { background-color: hsl(158, 61%, 65%); color: #6fdcb4 }
+secondary-200 { background-color: hsl(158, 74%, 75%); color: #90eecc }
+secondary-100 { background-color: hsl(158, 92%, 85%); color: #b6fce2 }
+
+grey-900 { background-color: hsl(50, 15%, 10%); color: #1d1c16 }
+grey-800 { background-color: hsl(50, 15%, 20%); color: #3b382b }
+grey-700 { background-color: hsl(50, 15%, 30%); color: #585441 }
+grey-600 { background-color: hsl(50, 15%, 40%); color: #757057 }
+grey-500 { background-color: hsl(50, 15%, 50%); color: #938c6c }
+grey-400 { background-color: hsl(50, 15%, 60%); color: #a8a38a }
+grey-300 { background-color: hsl(50, 15%, 70%); color: #bebaa7 }
+grey-200 { background-color: hsl(50, 15%, 80%); color: #d4d1c4 }
+grey-100 { background-color: hsl(50, 15%, 90%); color: #e9e8e2 }
