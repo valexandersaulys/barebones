@@ -6,8 +6,13 @@ The documetation is bit impractical so I'm rewriting it here.
 
 Context Variables:
 
-  * [`site`](https://ghost.org/docs/themes/helpers/site/)
+  * [`site`](https://ghost.org/docs/themes/helpers/site/) 
   * [`post`](https://ghost.org/docs/themes/helpers/post/)
+  * [`author`](https://ghost.org/docs/themes/contexts/author/): only
+    available on author pages
+
+  * [`tag`](https://ghost.org/docs/themes/contexts/tag/): only
+    available displaying on tags
 
 
 ## Layout of file
@@ -29,6 +34,8 @@ structure](https://ghost.org/docs/themes/structure/).
 ├── index.hbs [required]
 └── post.hbs [required]
 └── package.json [required]
+└── author.hbs 
+└── tag.hbs 
 ```
 
 partials are rendered with `{{> "name_of_partial" }}` with hbs

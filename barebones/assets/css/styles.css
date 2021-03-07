@@ -88,13 +88,17 @@ section.post-content > p, ol {
     margin: 0;
 }
 
+section.post-content > p > * {
+    margin: 12px 0 4px 0;
+}
+
 section.post-content > h1, h2, h3, h4, h5, h6 {
     margin: 32px 0 8px 0;
 }
 
 section.post-content > figure {
     /* image holder */
-    margin: 32px 0;
+    margin: 16px 0 48px 0;
     border-width: 2px;
     border-style: solid;
     border-color: #bebaa7;
@@ -129,7 +133,9 @@ section.post-content > figure > a > div > img {
     width: 100%
 }
 figure.kg-gallery-card { /* will hold a gallery of cards that can be iterate over in javascript */ }
-section.post-content > blockquote { }
+section.post-content > blockquote {
+    margin: 12px 48px;
+}
 section.post-content > pre {
     margin: 32px 0;
     overflow-x: scroll;
